@@ -15,6 +15,8 @@ res3 = pas.findall('fsdf1fsdfs2sfdds3fsdf4fs8fsdf5')
 #切割
 res4 = re.split(r'[a-z]','a1b2c3d4')
 
+print "findall",re.findall("[a-z]","12sdfsdf45fsdfer7er78tre7")
+
 
 
 

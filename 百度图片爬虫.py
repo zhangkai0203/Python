@@ -4,6 +4,7 @@
 import re
 import requests
 import time
+import os
 
 i = 0
 def get_data(str):
@@ -21,8 +22,13 @@ def get_data(str):
             except Exception as msg:
                 print '【错误】当前图片无法下载'
                 continue
+            #判断文件是否存在,不存在就创建
+            dirname = os.getcwd() + "\images"
 
-            string = './images/{}.jpg'.format(int(i))
+            if not os.path.exists(dirname):
+                os.mkdir(dirname)
+
+            string = dirname + '\{}.jpg'.format(int(i))
 
             global i
 
